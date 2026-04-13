@@ -23,67 +23,170 @@
 
 ---
 
-## Scoring System
+## North Star -- Target Roles (Summer 2026 Internship)
 
-The evaluation uses 6 blocks (A-F) with a global score of 1-5:
+The skill applies with EQUAL rigor to ALL target roles. None is primary or secondary -- any is a success if growth and research alignment are right:
 
-| Dimension | What it measures |
-|-----------|-----------------|
-| Match con CV | Skills, experience, proof points alignment |
-| North Star alignment | How well the role fits the user's target archetypes (from _profile.md) |
-| Comp | Salary vs market (5=top quartile, 1=well below) |
-| Cultural signals | Company culture, growth, stability, remote policy |
-| Red flags | Blockers, warnings (negative adjustments) |
-| **Global** | Weighted average of above |
+| Archetype | Thematic axes | What they buy |
+|-----------|---------------|---------------|
+| **AI/ML Research Intern** | NLP, LLM evaluation, bias/fairness research, model benchmarking | Someone who designs rigorous experiments and analyzes results |
+| **AI Engineer Intern** | Building ML pipelines, deploying models, LLM integration, API development | Someone who ships production ML systems |
+| **Data Science Intern** | Statistical modeling, data analysis, Python/R, ML algorithms, visualization | Someone who extracts insights from data |
+| **Responsible AI / AI Safety Intern** | Trust & safety, bias detection, content moderation, AI ethics | Someone who thinks deeply about AI impact |
+| **Software Engineer Intern (AI focus)** | Full-stack with ML integration, React + Python, API development | Someone who builds end-to-end products |
+| **NLP / LLM Intern** | Text classification, prompt engineering, LLM fine-tuning, evaluation frameworks | Someone who specializes in language models |
 
-**Score interpretation:**
-- 4.5+ → Strong match, recommend applying immediately
-- 4.0-4.4 → Good match, worth applying
-- 3.5-3.9 → Decent but not ideal, apply only if specific reason
-- Below 3.5 → Recommend against applying (see Ethical Use in CLAUDE.md)
+<!-- Archetypes configured for Shahaan Khan - M.S. Applied Human-Centered AI @ Syracuse University -->
 
-## Posting Legitimacy (Block G)
+### Adaptive Framing by Archetype
 
-Block G assesses whether a posting is likely a real, active opening. It does NOT affect the 1-5 global score -- it is a separate qualitative assessment.
+> **Concrete metrics: read from `cv.md` + `article-digest.md` at evaluation time. NEVER hardcode numbers here.**
 
-**Three tiers:**
-- **High Confidence** -- Real, active opening (most signals positive)
-- **Proceed with Caution** -- Mixed signals, worth noting (some concerns)
-- **Suspicious** -- Multiple ghost indicators, user should investigate first
+| If the role is... | Emphasize about the candidate... | Proof point sources |
+|-------------------|----------------------------------|---------------------|
+| AI/ML Research Intern | LLM cultural bias research, experimental design, HPC pipeline scaling, annotation methodology | article-digest.md + cv.md |
+| AI Engineer Intern | vLLM pipeline, Claude API integration, config-driven architecture, production deployment | article-digest.md + cv.md |
+| Data Science Intern | Statistical analysis, 7.1M API call experiments, data annotation at scale, F1 metrics | cv.md + article-digest.md |
+| Responsible AI / Safety | Bias detection research, cross-cultural NLP, human-centered AI coursework | article-digest.md + cv.md |
+| Software Engineer (AI) | React Native (ClearPath), TypeScript/Supabase, full-stack + ML integration | cv.md + article-digest.md |
+| NLP / LLM Intern | Text classification, prompting strategies (zero-shot, CoT), LLM evaluation frameworks | article-digest.md + cv.md |
 
-**Key signals (weighted by reliability):**
+<!-- Shahaan's differentiators: LLM cultural bias research, HPC-scale pipelines, hackathon wins, operational leadership -->
 
-| Signal | Source | Reliability | Notes |
-|--------|--------|-------------|-------|
-| Posting age | Page snapshot | High | Under 30d=good, 30-60d=mixed, 60d+=concerning (adjusted for role type) |
-| Apply button active | Page snapshot | High | Direct observable fact |
-| Tech specificity in JD | JD text | Medium | Generic JDs correlate with ghost postings but also with poor writing |
-| Requirements realism | JD text | Medium | Contradictions are a strong signal, vagueness is weaker |
-| Recent layoff news | WebSearch | Medium | Must consider department, timing, and company size |
-| Reposting pattern | scan-history.tsv | Medium | Same role reposted 2+ times in 90 days is concerning |
-| Salary transparency | JD text | Low | Jurisdiction-dependent, many legitimate reasons to omit |
-| Role-company fit | Qualitative | Low | Subjective, use only as supporting signal |
+### Exit Narrative (use in ALL framings)
 
-**Ethical framing (MANDATORY):**
-- This helps users prioritize time on real opportunities
-- NEVER present findings as accusations of dishonesty
-- Present signals and let the user decide
-- Always note legitimate explanations for concerning signals
+<!-- [CUSTOMIZE] Replace with YOUR narrative. Examples:
+     - "Built and sold my SaaS after 5 years. Now focused on applied AI at scale."
+     - "Led engineering at a Series B startup through 10x growth. Now seeking my next challenge."
+     - "Transitioned from consulting to building product. Looking for high-ownership roles."
+     Read from config/profile.yml → narrative.exit_story -->
 
-## Archetype Detection
+Use the candidate's exit story from `config/profile.yml` to frame ALL content:
+- **In PDF Summaries:** Bridge from past to future -- "Now applying the same [skill] to [JD domain]."
+- **In STAR stories:** Reference proof points from article-digest.md
+- **In Draft Answers (Section G):** The transition narrative should appear in the first response.
+- **When the JD asks for "entrepreneurial", "ownership", "builder", "end-to-end":** This is the #1 differentiator. Increase match weight.
 
-Classify every offer into one of these types (or hybrid of 2):
+### Cross-cutting Advantage
 
-| Archetype | Key signals in JD |
-|-----------|-------------------|
-| AI Platform / LLMOps | "observability", "evals", "pipelines", "monitoring", "reliability" |
-| Agentic / Automation | "agent", "HITL", "orchestration", "workflow", "multi-agent" |
-| Technical AI PM | "PRD", "roadmap", "discovery", "stakeholder", "product manager" |
-| AI Solutions Architect | "architecture", "enterprise", "integration", "design", "systems" |
-| AI Forward Deployed | "client-facing", "deploy", "prototype", "fast delivery", "field" |
-| AI Transformation | "change management", "adoption", "enablement", "transformation" |
+Frame profile as **"Research-minded builder with production experience"** that adapts framing to the role:
+- For Research: "researcher who scales experiments to millions of data points with rigorous methodology"
+- For AI Engineering: "builder who goes from prototype to production — HPC pipelines, cost optimization, API integration"
+- For Data Science: "analyst who combines statistical rigor with practical ML (56K texts, 34 annotators, multi-model comparison)"
+- For Responsible AI: "researcher focused on bias detection and human-centered evaluation across cultures"
+- For SWE: "full-stack engineer who ships fast — hackathon winner, React Native to production"
+- For NLP/LLM: "specialist in prompt engineering, evaluation frameworks, and cultural adaptation"
 
-After detecting archetype, read `modes/_profile.md` for the user's specific framing and proof points for that archetype.
+Convert "student" into a professional signal through proof points: operational leadership ($3.25M project), research scale (7.1M API calls), and fast delivery (24-hour hackathon win).
+
+### Portfolio as Proof Point (use in high-value applications)
+
+<!-- [CUSTOMIZE] If you have a live demo, dashboard, or public project, configure it here.
+     Example:
+     dashboard:
+       url: "https://yoursite.dev/demo"
+       password: "demo-2026"
+       when_to_share: "LLMOps, AI Platform, observability roles"
+     Read from config/profile.yml → narrative.proof_points and narrative.dashboard -->
+
+If the candidate has a live demo/dashboard (check profile.yml), offer access in applications for relevant roles.
+
+### Comp Intelligence (Internships)
+
+**Intern compensation is less variable — deprioritize comp in scoring.** Focus on:
+- Learning opportunity and mentorship quality
+- Research relevance and publication potential
+- Return offer conversion rate
+- Brand signal for future roles
+
+**General guidance:**
+- Use WebSearch for Glassdoor/Levels.fyi intern data if needed
+- AI/ML intern salaries typically range $40-60/hr at top companies, $25-40/hr at mid-tier
+- Total comp matters less than growth opportunity for internships
+
+### Negotiation Scripts
+
+<!-- [CUSTOMIZE] Adapt these to your situation -->
+
+**Salary expectations (general framework):**
+> "Based on market data for this role, I'm targeting [RANGE from profile.yml]. I'm flexible on structure -- what matters is the total package and the opportunity."
+
+**Geographic discount pushback:**
+> "The roles I'm competitive for are output-based, not location-based. My track record doesn't change based on postal code."
+
+**When offered below target:**
+> "I'm comparing with opportunities in the [higher range]. I'm drawn to [company] because of [reason]. Can we explore [target]?"
+
+### Location Policy
+
+<!-- [CUSTOMIZE] Adapt to your situation. Read from config/profile.yml → location -->
+
+**In forms:**
+- Binary "can you be on-site?" questions: follow your actual availability from profile.yml
+- In free-text fields: specify your timezone overlap and availability
+
+**In evaluations (scoring):**
+- Remote dimension for hybrid outside your country: score **3.0** (not 1.0)
+- Only score 1.0 if JD explicitly says "must be on-site 4-5 days/week, no exceptions"
+
+### Visa Filter (HARD DISQUALIFIERS)
+
+**CRITICAL: Check EVERY JD for visa blockers before evaluating.**
+
+If the JD contains ANY of these phrases, mark the role as **DISQUALIFIED** with explanation:
+- "US citizenship required" → DISQUALIFIED (security clearance likely)
+- "security clearance" → DISQUALIFIED (requires citizenship)
+- "unrestricted work authorization" → DISQUALIFIED (blocks CPT)
+- "permanent resident" or "green card" → DISQUALIFIED (blocks F-1)
+- "must be authorized to work without sponsorship" → FLAG FOR MANUAL REVIEW (CPT is NOT sponsorship, but verify)
+- "unable to sponsor" or "no sponsorship" → FLAG FOR MANUAL REVIEW (CPT doesn't require sponsorship)
+
+If NONE of these appear, add this note to the evaluation:
+> ✅ No visa blockers detected. CPT-eligible (university-administered, no employer cost).
+
+**CPT Explainer for recruiters (use when needed):**
+> CPT (Curricular Practical Training) is pre-approved by the university. It requires no H-1B filing, no employer cost, and no lottery risk. Valid for the full internship duration.
+
+### Scoring Weights (Internships)
+
+For internship evaluations, use these weights instead of the default senior-role weights:
+
+| Dimension | Weight | Criteria |
+|-----------|--------|----------|
+| Skill Match | 30% | Does JD align with Python/PyTorch/NLP/LLM/HuggingFace stack? |
+| Research Relevance | 25% | Connection to LLM bias, NLP, human-centered AI? |
+| Growth Opportunity | 20% | Will you learn new skills, publish, or get strong mentorship? |
+| Visa Compatibility | 15% | Any blockers? CPT-friendly? (see filter above) |
+| Company Signal | 10% | Brand recognition for future roles |
+
+**Deprioritized for interns:**
+- Compensation comparison (intern pay varies little)
+- Seniority assessment (N/A for internships)
+- Remote flexibility (most internships have fixed format)
+
+### Time-to-offer priority
+- Working demo + metrics > perfection
+- Apply sooner > learn more
+- 80/20 approach, timebox everything
+
+---
+
+## CV Generation Rules
+
+1. **FORMAT:** Single page ONLY. Never exceed one page under any circumstance.
+2. **MARGINS:** Playwright handles all margins (1in all sides). HTML template `body` has `padding: 0; margin: 0`. No CSS padding on any wrapper.
+3. **FILL THE PAGE:** If there is whitespace at the bottom, expand compressed bullets back to full detail. Restore bullets that were shortened during tailoring before leaving blank space. A full page is always better than a short page.
+4. **SECTION ORDER (never change):** Education → Professional Experience → Research Experience → Technical Skills → Technical Projects
+5. **NO summary paragraph or "Core Competencies" block. Ever.**
+6. **STYLING:** Name centered top, contact line below. Section headers bold with horizontal rule. Job title/company/location left-aligned, dates right-aligned. Bullet character is `•`. System font stack (Calibri, Arial, Helvetica). Letter size.
+7. **TAILORING METHOD:** Reorder bullets by JD relevance, inject keywords into existing bullets naturally. Never add fake sections or fabricated experience.
+8. **PROJECT LINKS (canonical — always use these):**
+   - TutorBot: https://github.com/ShahaanK/writing-improvement-ui
+   - ClearPath: https://devpost.com/software/clear-path-xao3gp
+   - Energy Forecasting: https://github.com/ShahaanK/SU-MAHCAI-IST-687-Intro-Data-Science/tree/main/Final%20Project
+9. **FONT:** Standard system font stack. No Space Grotesk, no DM Sans.
+
+---
 
 ## Global Rules
 

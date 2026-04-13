@@ -376,3 +376,20 @@ Si algo falla:
 5. Generar contenido en el idioma del JD (EN default)
 6. Ser directo y accionable — sin fluff
 7. Cuando generes texto en inglés (PDF summaries, bullets, STAR stories), usa inglés nativo de tech: frases cortas, verbos de acción, sin passive voice innecesaria, sin "in order to" ni "utilized"
+
+---
+
+## CV Generation Rules
+
+1. **FORMAT:** Single page ONLY. Never exceed one page under any circumstance.
+2. **MARGINS:** Playwright handles all margins (1in all sides). HTML template `body` has `padding: 0; margin: 0`. No CSS padding on any wrapper.
+3. **FILL THE PAGE:** If there is whitespace at the bottom, expand compressed bullets back to full detail. Restore bullets that were shortened during tailoring before leaving blank space. A full page is always better than a short page.
+4. **SECTION ORDER (never change):** Education → Professional Experience → Research Experience → Technical Skills → Technical Projects
+5. **NO summary paragraph or "Core Competencies" block. Ever.**
+6. **STYLING:** Name centered top, contact line below. Section headers bold with horizontal rule. Job title/company/location left-aligned, dates right-aligned. Bullet character is `•`. System font stack (Calibri, Arial, Helvetica). Letter size.
+7. **TAILORING METHOD:** Reorder bullets by JD relevance, inject keywords into existing bullets naturally. Never add fake sections or fabricated experience.
+8. **PROJECT LINKS (canonical — always use these):**
+   - TutorBot: https://github.com/ShahaanK/writing-improvement-ui
+   - ClearPath: https://devpost.com/software/clear-path-xao3gp
+   - Energy Forecasting: https://github.com/ShahaanK/SU-MAHCAI-IST-687-Intro-Data-Science/tree/main/Final%20Project
+9. **FONT:** Standard system font stack. No Space Grotesk, no DM Sans.

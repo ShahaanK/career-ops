@@ -1,21 +1,19 @@
-# Modo: ofertas — Comparación Multi-Oferta
+# Mode: ofertas — Multi-Offer Comparison
 
-Scoring matrix de 10 dimensiones ponderadas:
+Scoring matrix with 10 weighted dimensions adapted for internships:
 
-| Dimensión | Peso | Criterios 1-5 |
-|-----------|------|----------------|
-| Alineación North Star | 25% | 5=rol target exacto, 1=no relacionado |
-| Match CV | 15% | 5=90%+ match, 1=<40% match |
-| Nivel (senior+) | 15% | 5=staff+, 4=senior, 3=mid-senior, 2=mid, 1=junior |
-| Comp estimada | 10% | 5=top quartile, 1=below market |
-| Trayectoria crecimiento | 10% | 5=clear path to next level, 1=dead end |
-| Calidad remoto | 5% | 5=full remote async, 1=onsite only |
-| Reputación empresa | 5% | 5=top employer, 1=red flags |
-| Modernidad tech stack | 5% | 5=cutting edge AI/ML, 1=legacy |
-| Velocidad a oferta | 5% | 5=fast process, 1=6+ months |
-| Señales culturales | 5% | 5=builder culture, 1=bureaucratic |
+| Dimension | Weight | Criteria 1-5 |
+|-----------|--------|--------------|
+| Skill Match | 25% | 5=exact target role, 1=unrelated |
+| Research Relevance | 20% | 5=directly connected to thesis/interests, 1=no research component |
+| CV Match | 15% | 5=90%+ match, 1=<40% match |
+| Growth Opportunity | 15% | 5=clear mentorship, potential publications, 1=busy work |
+| Company Signal | 10% | 5=top employer brand, 1=unknown |
+| Visa Compatibility | 5% | 5=explicitly intern-friendly, 1=citizenship required |
+| Remote Quality | 5% | 5=flexible/remote options, 1=strict onsite only |
+| Tech Stack Modernity | 5% | 5=cutting edge AI/ML, 1=legacy |
 
-Para cada oferta: score en cada dimensión, score ponderado total.
-Ranking final + recomendación con consideraciones de time-to-offer.
+For each offer: score in each dimension, weighted total score.
+Final ranking + recommendation with considerations for research alignment.
 
-Pedir al usuario las ofertas si no están en contexto. Puede ser texto, URLs, o referencias a ofertas ya evaluadas en el tracker.
+Ask the user for offers if not in context. Can be text, URLs, or references to already-evaluated offers in the tracker.
